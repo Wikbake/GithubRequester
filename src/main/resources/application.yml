@@ -1,0 +1,21 @@
+server:
+  tomcat:
+    threads:
+      max: 50
+async:
+  corePoolSize: 4
+  maxPoolSize: 4
+  queueCapacity: 500
+  threadNamePrefix: 'GithubRequesterLookup-'
+http:
+  client:
+    connectionTimeoutInSec: 2
+    socketTimeoutInSec: 2
+provider:
+  host: 'https://api.github.com'
+  usersPath: 'users'
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/githubrequester
+    username: postgres
+    password: postgres
